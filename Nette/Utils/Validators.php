@@ -246,7 +246,7 @@ class Validators extends Nette\Object
 			return FALSE;
 		}
 		preg_match("((?:$domain\\.)+$topDomain\\z)i",$value,$match);
-		return (bool) getmxrr($match[0]); // Check for MX records
+		return (bool) getmxrr($match[0],$mx); // Check for MX records
 	}
 
 
